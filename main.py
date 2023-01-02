@@ -22,4 +22,14 @@ while True:
     soup = BeautifulSoup(res, 'html.parser')
     price = float(soup.find('p', class_='price_color').text[1:])
 
+# Checking if the price is less than 40
+
+
+if price < 40:
+    smt = smtplib.SMTP('smtp.mail.yahoo.com', 587) # creates an SMTP objective using Yahoo's SMTP server and port number
+    smt.ehlo() # sends the EHLO command to the SMTP server, which initiates the SMTP session.
+    smt.starttls() # this line starts Transport Layer Security (TLS) for the SMTP connection, which allows for encryted communication
+    
+    
+
     
