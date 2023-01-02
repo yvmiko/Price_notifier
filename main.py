@@ -15,4 +15,6 @@ import smtplib
 import time
 
 # While loop will make sure the code runs (once a day)
-re = requests.get('http://books.toscrape.com/catalogue/finders-keepers-bill-hodges-trilogy-2_807/index.html')
+while True:
+    re = requests.get('http://books.toscrape.com/catalogue/finders-keepers-bill-hodges-trilogy-2_807/index.html')
+    res = re.content
