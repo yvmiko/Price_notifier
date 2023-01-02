@@ -14,4 +14,5 @@ import smtplib
 # time representations, and measuring elapsed time.
 import time
 
+# While loop will make sure the code runs (once a day)
 re = requests.get('')
