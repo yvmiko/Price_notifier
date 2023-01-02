@@ -1,8 +1,6 @@
-
-
-
 # 'requests' library for making HTTP requests 
 import requests
+
 # 'BeautifulSoup' is a Python library for parsing HTML and XML documents
 # it creates parse trees that are helpful to extract data easily
 from bs4 import BeautifulSoup
