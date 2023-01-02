@@ -39,7 +39,7 @@ while True:
         smt.quit() # this lin ends the SMTP session and closes the connection.
     time.sleep(24*60*60) # this line causes the script to pause for 24 hours 
                          # (24hours * 60 minutes * 60 seconds/minute) before continuing.
-ti             
+            
 
     
 
