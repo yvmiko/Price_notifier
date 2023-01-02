@@ -25,11 +25,22 @@ while True:
 # Checking if the price is less than 40
 
 
-if price < 40:
-    smt = smtplib.SMTP('smtp.mail.yahoo.com', 587) # creates an SMTP objective using Yahoo's SMTP server and port number
-    smt.ehlo() # sends the EHLO command to the SMTP server, which initiates the SMTP session.
-    smt.starttls() # this line starts Transport Layer Security (TLS) for the SMTP connection, which allows for encryted communication
-    
+    if price < 40:
+        smt = smtplib.SMTP('smtp.mail.yahoo.com', 587) # creates an SMTP objective using Yahoo's SMTP server and port number
+        smt.ehlo() # sends the EHLO command to the SMTP server, which initiates the SMTP session.
+        smt.starttls() # this line starts Transport Layer Security (TLS) for the SMTP connection, which allows for encryted communication
+        # Use your credentials
+        smt.login('YourEmail@yahoo.com', 'YourPassword') # this line logs in to the SMTP server using the provided email and password
+        # this line sends an email with the specified subject and body to the receiver's email address. The f before the string indicates that it is an f-string, 
+        # which allows for the evaluation of expressions inside string literals. In this case, the value of the price variable is included in the body of the email
+        smt.sendmail('Sender@yahoo.com', 
+                 'Receiver@yahoo.com', 
+                 f"Subject: Book Price Notifier\n\nHi, price has dropped to {price}.") 
+        smt.quit() # this lin ends the SMTP session and closes the connection.
+    time.sleep(24*60*60) # this line causes the script to pause for 24 hours 
+                         # (24hours * 60 minutes * 60 seconds/minute) before continuing.
+ti             
+
     
 
     
