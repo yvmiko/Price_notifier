@@ -18,3 +18,8 @@ import time
 while True:
     re = requests.get('http://books.toscrape.com/catalogue/finders-keepers-bill-hodges-trilogy-2_807/index.html')
     res = re.content
+
+    soup = BeautifulSoup(res, 'html.parser')
+    price = float(soup.find('p', class_='price_color').text[1:])
+
+    
