@@ -15,7 +15,7 @@ Requirements
 
 1. Clone the repository and navigate to the directory:
    git clone https://github.com/your-username/book-price-notifier.git
-   cd book-price-notifier
+   cd book-price-notifier.
 
 
 
