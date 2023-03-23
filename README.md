@@ -4,7 +4,7 @@
 
 This Python script uses the requests library to scrape the price of a particular book from a website and sends an email notification using smtplib when the price falls below a specified threshold.
 
-Requirements
+Requirements:
 
 * Python 3.6 or higher
 * requests library
